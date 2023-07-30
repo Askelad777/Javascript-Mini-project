@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&display=swap');
+
+
+:root{
+
+    --primary-color: #16a809;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background: black;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+h1,h2,h3,h4{
+    line-height:  3rem;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* Header */
+
+.main-header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url(/images/backgroundSPIDER.jpg) no-repeat center center/cover;
+}
+
+.main-header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+
+
+}
+
+.header-top{
+    position: relative;
+    height: 90px;
+    z-index: 2;
+}
+
+.header-top .logo{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-top a{
+    position: absolute;
+    top: 40%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.header-content{
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+    z-index: 2;
+}
+
+.header-content h1{
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.3rem;
+    margin: 0 0 2rem;
+
+}
+
+.header-content p{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.25rem;
+    margin: 1rem 2rem;
+
+}
+
+.header-content a{
+
+    margin-top: 2rem;
+}
+
+
+/* Section-Gallery*/
+
+section.gallery{
+    background: black;
+    width: 100%;
+}
+
+section.gallery .gallery-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "box1 box2 box2"
+    "box1 box3 box3";
+
+}
+
+section.gallery .gallery-container a:first-child{
+    grid-area: box1;
+    padding: 1rem;
+}
+
+section.gallery .gallery-container a:nth-child(2){
+    grid-area: box2;
+    padding: 1rem;
+}
+
+
+section.gallery .gallery-container a:last-child{
+    grid-area: box3;
+    padding: 1rem;
+}
+
+
+.img-container{
+    position: relative;
+    display: inline-block;
+}
+
+.img-container .text-container{
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: rgba(0,0,0,0.6);
+}
+
+.img-container .text-container:hover{
+    opacity: 1;
+}
+
+/* Utilities*/
+
+.btn{
+
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-sizing: 0 1px 0 rgba(248, 245, 245, 0.45);
+    border-style: 2px;
+}
+
+.btn::hover{
+    opacity: 0.9;
+}
+
+.btn-rounded{
+    border-radius: 5px;
+}
+
+.btn-xl{
+    font-size: 1.8rem;
+    padding: 1rem 2.1rem;
+    text-transform: uppercase;
+
+}
+
+.btn-lg{
+    font-size: 1.2rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+
+.fa-fw{
+    margin: 1rem;
+    
+}
