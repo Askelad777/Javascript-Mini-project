@@ -3,7 +3,7 @@
 
 :root{
 
-    --primary-color: #16a809;
+    --primary-color: #f43d05;
 }
 *{
     margin: 0;
@@ -17,6 +17,9 @@ body{
     color: white;
     font-size: 1.1rem;
     line-height: 1.6rem;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 h1,h2,h3,h4{
@@ -42,7 +45,7 @@ img {
     width: 100%;
     height: 100vh;
     position: relative;
-    background: url(/images/backgroundSPIDER.jpg) no-repeat center center/cover;
+    background: url(/images/TheHooligans.png) no-repeat center center/cover;
 }
 
 .main-header::after{
@@ -109,7 +112,7 @@ img {
 }
 
 .header-content a{
-
+    border-radius: 0.5;
     margin-top: 2rem;
 }
 
@@ -165,14 +168,167 @@ section.gallery .gallery-container a:last-child{
     left: 0;
     height: 100%;
     width: 100%;
-    background-size: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.6);
+    transition: all .3s ease-in-out;
 }
 
 .img-container .text-container:hover{
     opacity: 1;
 }
 
+.img-container .text-container{    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.about-section{
+    position: relative;
+    background: url(/images/TheHooligansSignature.png) no-repeat center center/cover;
+    height: 400px;
+}
+
+.about-section-inner{
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    max-width: 860px;
+    padding: 5rem 0;
+}
+
+.about-section-inner h3{
+    font-size: 3rem;
+}
+
+.about-section-inner h2{
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-top: 1rem;
+}
+
+.about-section-inner p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* News letter Section */
+
+.news-letter{
+    width: 100%;
+    height: 400px;
+    background: rgb(19, 19, 19);
+}
+
+.news-letter-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+
+
+
+.news-letter-inner h2{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.email-form{
+    width: 100%;
+    display: inline-block;
+    background-color: #f93701;
+    position: relative;
+    border-radius: 20px;
+    line-height: 0;
+    margin-top: 1rem;
+}
+
+.email-form .form-control{
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    color: #ddd;
+    background-color: transparent;
+    font-size: inherit;
+    margin: 0;
+    padding: 0 3rem o 1.5rem;
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.email-form .submit{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: #de4001;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer{
+    max-width: 75%;
+    margin: 2rem auto;
+    overflow: auto;
+
+}
+
+.footer, .footer-col a{
+    color: #de4001;
+    font-size: .9rem;
+
+}
+
+.footer, .footer-reserves p{
+    margin-bottom: 1.5rem;
+}
+
+.footer, .footer-col{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer, .footer-col li{
+    line-height: 1.9rem;
+}
+
+
 /* Utilities*/
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
 
 .btn{
 
@@ -201,6 +357,7 @@ section.gallery .gallery-container a:last-child{
 .btn-xl{
     font-size: 1.8rem;
     padding: 1rem 2.1rem;
+    border-radius: 10px;
     text-transform: uppercase;
 
 }
@@ -214,4 +371,72 @@ section.gallery .gallery-container a:last-child{
 .fa-fw{
     margin: 1rem;
     
+}
+
+/* media Queery */
+
+@media (max-width: 844px){
+
+
+    .header-top a{
+        top: 90%;
+        right: 26%;
+        transform: translate(-90%, -22%);
+    }
+
+    .header-content{
+        margin-top: 25%;
+    }
+
+    .header-content h1{
+        font-size: 4.5rem;
+        line-height: 3.5rem;
+    }
+
+    .header-content p{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .btn-xl{
+        font-size: 1.5rem;
+        padding: 0.5rem 2rem;
+    }
+
+    section.gallery .gallery-container{
+        grid-template-areas: "box1" "box2" "box3";
+        grid-template-columns: 1fr;
+    }
+
+
+    section.about-section .overlay{
+        margin-top: -5%;
+
+    }
+    .about-section-inner h2{
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+    .about-section-inner h3{
+        font-size: 4rem;
+        line-height: 3.8rem;
+    }
+
+    .about-section-inner p{
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+
+    .news-letter-inner {
+        text-align: center;
+    }
+
+    .email-form{
+        width: 95%;
+    }
+
+    footer .footer-col{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
