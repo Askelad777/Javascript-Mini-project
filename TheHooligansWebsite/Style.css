@@ -46,6 +46,7 @@ img {
     height: 100vh;
     position: relative;
     background: url(/images/TheHooligans.png) no-repeat center center/cover;
+    background-size: 59%;
 }
 
 .main-header::after{
@@ -378,6 +379,9 @@ section.gallery .gallery-container a:last-child{
 @media (max-width: 844px){
 
 
+    .main-header{
+        background-size: 150%;
+    }
     .header-top a{
         top: 90%;
         right: 26%;

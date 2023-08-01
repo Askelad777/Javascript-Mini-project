@@ -15,7 +15,7 @@
     width: 100%;
     height: 100vh;
     background: url(/images/TheHooligans.png) no-repeat;
-    background-size: 70%;
+    background-size: 59%;
     background-position: center;
     animation: animateBg 5s linear infinite;
 }
@@ -139,13 +139,15 @@ button{
  text-decoration: underline;
 }
 
-@media (max-width: 400px){
+@media (max-width: 390px){
     .Login-box{
-
+        background-size: 70%;
+    }
+    .Login-box{
         width: 100%;
         height: 100vh;
         border: none;
         border-radius: 0;
-
+        
     }
 }
