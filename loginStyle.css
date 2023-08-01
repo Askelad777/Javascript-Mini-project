@@ -5,23 +5,38 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
-body{
+.BlackBG{
+    background: black;
+}
+.Login-box{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: black;
+    width: 100%;
+    height: 100vh;
+    background: url(/images/TheHooligans.png) no-repeat;
+    background-size: 70%;
+    background-position: center;
+    animation: animateBg 5s linear infinite;
 }
 
-.Login-box{
+@keyframes animateBg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.login-container{
     position: relative;
     width: 400px;
     height: 450px;
-    background:red;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    border: 2px solid rgb(239, 39, 3);
+    backdrop-filter: blur(2px);
 }
 h2{
     font-size: 2em;
@@ -48,7 +63,7 @@ h2{
 }
 
 .input-box input:focus~label,
-.input-box input:focus~label {
+.input-box input:valid~label {
     top: -5px;
 }
 
@@ -60,6 +75,7 @@ h2{
     outline: none;
     font-size: lem;
     color: white;
+    padding: 0 8px 0 5px;
 }
 .input-box .icon{
     position: absolute;
@@ -68,4 +84,68 @@ h2{
     font-size: 1.2em;
     line-height-step: 57px;
 
+}
+
+.remember-me-box{
+    margin: -15px 0 15px;
+    font-size: .9rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.remember-me-box label input{
+    margin-right: 3px;
+
+}
+
+.remember-me-box a {
+    color: white;
+    text-decoration: none;
+}
+
+.remember-me-box a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+}
+
+.register-section{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register-section p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-section p a:hover{
+ text-decoration: underline;
+}
+
+@media (max-width: 400px){
+    .Login-box{
+
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+
+    }
 }
