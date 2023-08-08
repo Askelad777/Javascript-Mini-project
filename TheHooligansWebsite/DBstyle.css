@@ -7,7 +7,7 @@
     font-family: 'Nunito', sans-serif;
 }
 body{
-    background: rgb(237, 237, 237);
+    background: rgba(175, 167, 167, 0.769);
 }
 
 
@@ -19,7 +19,7 @@ body{
     height: 8.2%;
     display: flex;
     border-bottom: 1px solid rgb(239,39,3);
-    background: red;
+    background: rgba(239, 39, 3, .8);
     position: fixed;
 }
 
@@ -103,13 +103,13 @@ body{
     padding: 0 20px 20px 20px;
     width: 100%;
     cursor: pointer;
-    background: url(/images/Robbery\ activity);
-    background-size: cover;
+    background: url(/images/TheHooligans.png) no-repeat center;
+    background-size: 59%;
 }
 .AboutTH-container .Headings{
     font-size: 2rem;
     text-align: center;
-    padding: 15px 15px 20px 0;
+    padding: 4.5rem 15px 20px 0;
     color: rgb(239, 39, 3);
     text-shadow: 0 5px 10px rgb(0, 0, 0);
 }
@@ -123,7 +123,7 @@ body{
 .AboutTH-container .box-container .box{
     box-shadow: 0 5px 10px rgb(0, 0, 0, .2);
     border-radius: 5px;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .75);
     text-align: center;
     padding: 30px 20px;
 
@@ -160,16 +160,18 @@ body{
 
 .Gameplay-container{
     width: 100%;
-    border: 2px dotted red;
+    background: white;
+    background-size: 50%;
 }
 
 .gameplay-wrapper .gameplaysection-header{
     text-align: center;
     width: 100%;
     height: 60px;
-    background: rgb(0, 0, 0, .9 );
+    background: rgba(175, 167, 167, 0.769);
 }
 .gameplay-wrapper .gameplaysection-header h1{
+    font-size: 2rem;
     padding: 13px;
     color: rgb(239, 39, 3);
 
@@ -178,8 +180,7 @@ body{
 
 .shooting-game{
     align-items: center;
-    border: 5px solid rgb(13, 2, 135);
-    background: rgba(0, 0, 0, .7);
+    background: rgba(175, 167, 167, 0.769);
     display: flex;
 }
 
@@ -202,17 +203,113 @@ body{
     line-height: 2rem;
 }
 
+
 .Role-playing{
-    border: 5px solid rgb(135, 2, 2);
-    background: rgba(0, 0, 0, .7);
-     display: flex;
-     align-items: center;
+    background: rgba(175, 167, 167, 0.769);
+    display: flex;
+    align-items: center;
 }
+
+.Role-playing .roleplay-info{
+    align-items: center;
+    text-align: center;
+    color: rgb(239, 39, 3);
+
+}
+
+.Role-playing .roleplay-info h3{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 15px;
+}
+
+.Role-playing .roleplay-info p{
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
 .CommunityInteraction{
-    border: 5px solid rgb(23, 114, 6);
-    background: rgba(0, 0, 0, .7);
-     display: flex;
-     align-items: center;
+    background: rgba(175, 167, 167, 0.769);
+    display: flex;
+    align-items: center;
+}
+
+.CommunityInteraction .community-info{
+    align-items: center;
+    text-align: center;
+    color: rgb(239, 39, 3);
+
+}
+
+.CommunityInteraction .community-info h3{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 15px;
+}
+
+.CommunityInteraction .community-info p{
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 /* <!-- GAME PLAY SECTION ENDS --> */
+
+/* <!-- Game activities starts --> */
+
+.game-section-cards{
+    background: rgba(175, 167, 167, 0.769);
+
+    
+    
+}
+
+.GM-headings{ 
+    background: rgba(175, 167, 167, 0.769);
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(239, 39, 3);
+}
+.game-section-cards{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px 40px 15px ;
+    overflow: hidden;
+}
+.game-section-cards .card{
+    background-color: rgba(0, 0, 0, .8);
+    display: block;
+    
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 0px 100px 0px 35px;
+    
+}
+.game-section-cards .card img{
+    margin: 10px 17.5px 10px ;
+    width: 90%;
+    height: 50%;
+    
+}
+.game-section-cards .card .content{
+    width: 100%;
+    height: 50%;  
+}
+
+.game-section-cards .card .content p{
+    font-size: 1.22rem;
+    color: rgb(244, 232, 230);
+    justify-content: center;
+    text-align: center;
+}
+.game-section-cards .card .content h3{
+    font-size: 1.22rem;
+    color: rgb(244, 232, 230);
+    justify-content: center;
+    text-align: center;
+}
+
+/* <!-- Game activities ends --> */
