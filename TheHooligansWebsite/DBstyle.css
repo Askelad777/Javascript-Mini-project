@@ -313,3 +313,55 @@ body{
 }
 
 /* <!-- Game activities ends --> */
+/* Footer Section */
+
+.footer{
+    max-width: 75%;
+    margin: 2rem auto;
+    overflow: auto;
+
+}
+
+.Footer-container{
+    background: black;
+
+}
+
+.footer, .footer-col a{
+    color: #de4001;
+    font-size: .9rem;
+
+}
+
+.footer, .footer-reserves p{
+    margin-bottom: .9rem;
+    padding: 15px;
+    color: white;
+}
+
+.footer, .footer-col{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer, .footer-col li{
+    line-height: 1.9rem;
+}
+/* Footer section end */
+
+@media(max-width: 600px){
+
+    .header-container .Logo h1{
+        display: flex;
+        font: 4rem;
+    }
+
+    .nav-links{
+
+    }
+    
+
+
+
+}

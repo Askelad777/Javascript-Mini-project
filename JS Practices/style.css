@@ -1,0 +1,23 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn-atc{
+  cursor: pointer;
+  background: yellow;
+  border: 2px solid black;
+  display: inline-block;
+  margin: 10px 20px 0 10px;
+  padding: 10px;
+}
+
+.btn-buynow{
+  cursor: pointer;
+  background: orange;
+  border: 2px solid black;
+  display: inline-block;
+  margin: 10px 20px 0 10px;
+  padding: 10px;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Excercises</title>
+  <link rel="stylesheet" href="/Websites-projects-summerVAC-2023-1/JS Practices/05-Exercises/ExcercisesStyle.css">
+</head>
+
+
+
+<body>
+  <!-- Cart Quantity -->
+  <div class="carQuantity">
+    <h1>Cart Quantity</h1>
+    <button onclick="console.log(`Cart Quantity = ${cartQuantity}`);">Show Quantity</button>
+
+
+
+
+
+    <button onclick="
+
+      cartQuantity += 1;
+      //the Shortcut version is cartQuantity += 2;
+      console.log(`Cart Quantity = ${cartQuantity}`)
+
+      ">Add to Cart</button>
+
+    <button onclick="
+      
+      cartQuantity += 2;
+      console.log(`Cart Quantity = ${cartQuantity}`)
+
+      ">+2</button>
+
+    <button onclick="
+      
+      cartQuantity += 3;
+      console.log(`Cart Quantity = ${cartQuantity}`)
+
+    ">+3</button>
+
+    <button onclick="
+          
+          cartQuantity += 4;
+          console.log(`Cart Quantity = ${cartQuantity}`)
+    
+    ">+4</button>
+
+    <button onclick="
+          
+          cartQuantity += 5;
+          console.log(`Cart Quantity = ${cartQuantity}`)
+    
+    ">+5</button>
+
+    <button onclick="
+              
+          cartQuantity -= 1;
+          console.log(`Cart Quantity = ${cartQuantity}`)
+    
+    ">Remove from Cart</button>
+
+    <button onclick="
+              
+          cartQuantity -= 2;
+          console.log(`Cart Quantity = ${cartQuantity}`)
+    
+    ">-2</button>
+
+    <button onclick="
+              
+          cartQuantity -= 3;
+          console.log(`Cart Quantity = ${cartQuantity}`)
+    
+    ">-3</button>
+
+
+
+    <button onclick="
+      
+      cartQuantity = 0;
+      console.log('Cart was Reset.');
+      console.log(`Cart Quantity = ${cartQuantity}`)
+      ">Reset Cart</button>
+  </div>
+  <!-- Cart Quantity -->
+
+  <!-- Restaurant Order -->
+  <div class="restaurantOrder">
+    <h1>Restaurant Order</h1>
+    <button class="btn-OB" onclick="
+
+        bagelQuantity += 1;
+        productCost +=3;
+
+        console.log(`Bagel Quantity(${bagelQuantity})`);
+
+    ">Bagel : $3</button>
+
+    <button class="btn-OC" onclick="
+    
+        coffeeQuantity += 1;
+        productCost +=5;
+
+        console.log(`Coffee Quantity(${coffeeQuantity})`);
+
+    ">Coffee : $5</button>
+
+    <button class="btn-OS" onclick="
+    
+        soupQuantity += 1;
+        productCost +=9;
+
+        console.log(`Soup Quantity(${soupQuantity})`);
+    ">Soup : $9</button>
+
+    <!-- Below is the cost and discount section -->
+
+    <button class="btn-cost" onclick="
+
+      discountedProduct += ((orderCost + ((bagelQuantity * 3)+(coffeeQuantity * 5)+(soupQuantity * 9)))*orderDiscount);
+
+      console.log(`The Total discount is $${discountedProduct}`)
+
+      console.log(`Cost of Food $${(orderCost + ((bagelQuantity * 3)+(coffeeQuantity * 5)+(soupQuantity * 9)))- discountedProduct}`)
+
+    ">Total Cost of Food( - 10%)</button>
+
+
+
+
+  </div>
+  <!-- Restaurant Order -->
+
+
+
+  <script>
+    let productCost = 0;
+    let cartQuantity = 0; 
+
+    let orderQuantity = 0;
+    let orderCost = 0;
+
+
+    let bagelQuantity = 0;
+    let coffeeQuantity = 0;
+    let soupQuantity = 0;
+
+    let orderDiscount = .1;
+    let discountedProduct = 0;
+
+  </script>
+</body>
+
+</html>
