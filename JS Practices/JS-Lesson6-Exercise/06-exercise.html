@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 Excercise</title>
+</head>
+<body>
+  <div class="Lesson6">
+
+  </div>
+  <script>
+    let hour = 12;
+    const name = 'Xyp Collen '
+    if(hour >= 0 && hour <12){
+      console.log(`Current is time ${hour} in 24 hours format, Good morning ${name}`);
+    }else if(hour >= 12 && hour < 18){
+      console.log(`Current is time ${hour} in 24 hours format, Good afternoon ${name}`);
+    }else{
+      console.log(`Current is time ${hour} in 24 hours format, Good evening ${name}`);
+    }
+
+    let age = 5;
+    const isHoliday = false;
+    if (isHoliday == true && (age <= 6 || age >= 65)){
+      console.log(`Your age is ${age}, eligible for discount but it is not holiday`);
+    }else if(isHoliday == false &&(age <= 6 || age >= 65)){
+      console.log(`Your age is ${age}, and it's holiday. Discounted`);
+    }else{
+      console.log(`Your age is ${age}, Not discounted`);
+    }
+
+    console.log('Guess head or tail - flip coin');
+
+    const guess = 'heads';
+    let flipcoinResult = Math.random();
+
+
+    const flipcoin = guess === 'heads' && flipcoinResult > 1/2 ? `You won, your guess is \"${guess}\" and the result is head` : `You lose, your guess is \"${guess}\" and the result is tail`
+
+    
+    console.log(flipcoin);
+  </script>
+</body>
+</html>
