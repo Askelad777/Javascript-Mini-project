@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+  <!-- 
+    Here is the  catch about the game called rock paper scissors
+    Gameplay: The rules
+              1. paper beat rock
+              2. rock beat scissor
+              3. scissor beat paper
+
+              the games consist of 2 players. The play chose the uppper hand item considered a winner.
+              there is no limit regarding the score. If player hit the end/restart button that would be
+              the end of the game.
+  
+  
+  -->
+
+   // this div contains all the html and Java script code so that the game will work as support
+   
+  <div class="rock-paper-scissor-game">
+
+    <p style="font-size: 30px;">
+      Rock Paper Scissors
+    </p>
+      <button onclick="
+      
+         pickcomputerMove();   
+         matchResult();
+
+      alert(`You pick Rock, Computer picked ${computerMove}. ${result}`);
+
+      ">Rock</button>
+      <button  onclick="
+      
+         pickcomputerMove();
+         matchResult();
+
+      
+
+      alert(`You pick Paper, Computer picked ${computerMove}. ${result}`);
+
+      ">Paper</button>
+      <button onclick="
+     
+         pickcomputerMove();
+         matchResult();
+
+      alert(`You pick Scissor, Computer picked ${computerMove}. ${result}`);
+
+      ">Scissors</button>
+   
+  </div>
+
+
+</body>
+
+<script>
+
+
+
+//  The Function below display the algorith of how the computer pick its move againt the player.
+// The use of the function in our program is to make the code clean and understandable
+
+   // this 2 variable if our global variable. And it is currently used on our function.
+    let computerMove = '';
+    let result = '';
+
+   function pickcomputerMove(){
+
+      const randomPick = Math.random();
+
+      if (randomPick >= 0 && randomPick < 1 / 3) {
+         computerMove = 'Rock';
+      } else if (randomPick >= 1 / 3 && randomPick < 2 / 3) {
+         computerMove = 'Paper';
+      } else if (randomPick >= 2 / 3 && randomPick < 1) {
+         computerMove = 'Scissor';
+      }
+
+   }
+
+   // The work of the function below is to determine how win the match. 
+
+   function matchResult(){
+
+       if (computerMove === 'Rock') {
+         result = 'You lose';
+      } else if (computerMove === 'Paper') {
+         result = 'You win';
+      } else if (computerMove === 'Scissor') {
+         result = 'Tie';
+      }
+
+   }
+
+ 
+</script>
+</html>
