@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+
+</body>
+
+<script>
+  /*
+  const product = {
+      name:'RTX-3090',
+      price:60900
+   };
+   console.log(product);
+   console.log(product.name);
+   console.log(product.price);
+   
+
+   product.name = 'intel I9';
+   product.price = 10900;
+   console.log(product);
+
+   // Adding new entity inside the object
+   product.newProperty = true;
+   console.log(product);
+
+   //deleting an entity inside the object.
+   delete product.newProperty;
+   console.log(product);
+   
+   // using the console.log(typeof <variable>); is the way to determine what kind of data type the variable is.
+    */
+
+    const product2 ={
+      name: 'Waffle-shirt',
+      'delivery-time': '1-day',
+      rating:{
+        star: 4.5,
+        count: 85
+      },
+      fun: function function1(){
+        console.log('A function inside the object');
+      }
+    }
+    
+    // The 2 way to access the object elements. The bracket notation and dot notation
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name'])
+    console.log(product2.name+' : '+product2['delivery-time'])
+    //accessing the nested object value.
+    console.log(product2.rating.star);
+    //accessing the function inside the object
+    product2.fun();
+    // JSON is the abbreviation if JAVA-SCRIPT-NOTATION - jason does not support single qoute.
+    // Compared with the javascript both single quote and double qoute are supported and function.
+    // the thing is they cannot be mixed up or else it will display and error in our console
+
+    // the JSON.stringify is the method of conversion from JS syntax to JSON syntax
+    console.log(JSON.stringify(product2));
+    //JSON.parse(<variable>) is a method of converting a json.syntax back into its orignal.
+    // The code below is the example of converting json back into JS object. 
+    const jsonString = JSON.stringify(product2);
+
+    console.log(JSON.parse(jsonString));
+
+    
+</script>
+</html>
