@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function that Greet names</title>
+</head>
+<body>
+  <script>
+    // The Function Below ask the user his/her name and display to the console along with the fix greetings template
+    // If the user decided to not put any value of parameter it will display the default value. ' Hello there!'
+    function greet(name){
+
+      if(!name){
+        console.log(`Hello there!.`);
+      }else{
+        console.log(`Hello!, ${name}.`);
+      }
+
+    }
+    greet();
+    // End of the first function
+
+
+    //This convertToFahrenheit function will ask a user a celcuis and will convert it into fahrenheit.
+    function convertToFahrenheit(celsius){
+      const Fahrenheit = (celsius * 9/5) + 32;
+
+      return console.log(Fahrenheit + '°F');
+
+    }
+    convertToFahrenheit(30.57);
+    // End of the Second function
+
+    // This function is the vice-versa of the 2nd function.
+    function convertToCelsius(Fahrenheit){
+      const celsius = (Fahrenheit - 32)* 5/9
+
+      return console.log(celsius + '°C');
+
+    }
+    convertToCelsius(87);
+    //  End of the 3rd function
+
+    //This function below convert °F into °C, vice-versa. User will input a value into degree(number) and unit ('f' or 'C') then the function will make then value into the ofter unit.
+
+    function convertTemperature(degree, unit){
+      const convertedTemperature = '';
+      const convertedUnit = '';
+    if(unit == 'C'){
+      const convertedTemperature = convertToFahrenheit(degree)
+      const convertedUnit = '°F';
+    }else if(unit == 'F'){
+      const convertedTemperature = convertToCelsius(degree)
+      const convertedUnit = '°C';
+    }
+
+      return console.log(convertedTemperature + convertedUnit);
+
+    }
+    convertTemperature(33, 'F');
+
+    // End of the 4th function.
+
+
+  </script>
+</body>
+</html>
