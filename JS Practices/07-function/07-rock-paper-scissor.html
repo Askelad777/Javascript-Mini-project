@@ -21,7 +21,7 @@
   
   -->
 
-   // this div contains all the html and Java script code so that the game will work as support
+ 
    
   <div class="rock-paper-scissor-game">
 
@@ -30,29 +30,17 @@
     </p>
       <button onclick="
       
-         pickcomputerMove();   
-         matchResult();
-
-      alert(`You pick Rock, Computer picked ${computerMove}. ${result}`);
-
+         playGame('Rock');
       ">Rock</button>
+
+
       <button  onclick="
-      
-         pickcomputerMove();
-         matchResult();
 
-      
-
-      alert(`You pick Paper, Computer picked ${computerMove}. ${result}`);
-
+         playGame('Paper');
       ">Paper</button>
+
       <button onclick="
-     
-         pickcomputerMove();
-         matchResult();
-
-      alert(`You pick Scissor, Computer picked ${computerMove}. ${result}`);
-
+         playGame('Scissor');
       ">Scissors</button>
    
   </div>
@@ -68,37 +56,56 @@
 // The use of the function in our program is to make the code clean and understandable
 
    // this 2 variable if our global variable. And it is currently used on our function.
-    let computerMove = '';
-    let result = '';
 
-   function pickcomputerMove(){
+   function playGame(playerMove){
 
-      const randomPick = Math.random();
+      const computerMove = pickcomputerMove();
+      
+         if(playerMove === 'Rock'){
 
-      if (randomPick >= 0 && randomPick < 1 / 3) {
-         computerMove = 'Rock';
-      } else if (randomPick >= 1 / 3 && randomPick < 2 / 3) {
-         computerMove = 'Paper';
-      } else if (randomPick >= 2 / 3 && randomPick < 1) {
-         computerMove = 'Scissor';
-      }
+            if (computerMove === 'Rock') {
+               result = 'Tie';
+            } else if (computerMove === 'Paper') {
+               result = 'You Lose';
+            } else if (computerMove === 'Scissor') {
+               result = 'You win';
+            }
 
+         }else if(playerMove === 'Scissor'){
+             if (computerMove === 'Rock') {
+               result = 'You Lose';
+            } else if (computerMove === 'Paper') {
+               result = 'You Win';
+            } else if (computerMove === 'Scissor') {
+               result = 'Tie';
+            }
+         }else{
+            if (computerMove === 'Rock') {
+               result = 'You Win';
+            } else if (computerMove === 'Paper') {
+               result = 'Tie';
+            } else if (computerMove === 'Scissor') {
+               result = 'You Lose';
+            }
+         }
+
+      alert(`You pick ${playerMove}, Computer picked ${computerMove}. ${result}`);
    }
 
-   // The work of the function below is to determine how win the match. 
+   function pickcomputerMove() {
 
-   function matchResult(){
+         const randomPick = Math.random();
 
-       if (computerMove === 'Rock') {
-         result = 'You lose';
-      } else if (computerMove === 'Paper') {
-         result = 'You win';
-      } else if (computerMove === 'Scissor') {
-         result = 'Tie';
+         if (randomPick >= 0 && randomPick < 1 / 3) {
+            computerMove = 'Rock';
+         } else if (randomPick >= 1 / 3 && randomPick < 2 / 3) {
+            computerMove = 'Paper';
+         } else if (randomPick >= 2 / 3 && randomPick < 1) {
+            computerMove = 'Scissor';
+         }
+
+         return computerMove;  
       }
 
-   }
-
- 
 </script>
 </html>
