@@ -59,7 +59,7 @@
 </body>
 
 <script>
-
+ 
    //localStorage.getItem(); a method that retrieved the saved-data into our computer.
    // JSON.parse(localStorage.getItem('score')); Converting the string-data-type back into object.
 
@@ -67,10 +67,11 @@
       wins: 0,
       losses: 0,
       ties: 0
-   }/*Default value ENDS*/ 
+   }
+   /*Default value ENDS*/ 
 
-   
-   /*
+
+/*
    if(!score){
       score = {
          wins: 0,
@@ -134,7 +135,7 @@
       localStorage.setItem('score', JSON.stringify(score));
 
       alert(`You pick ${playerMove}, Computer picked ${computerMove}. ${result}
-Wins: ${score.wins}, Loses: ${score.losses}, Ties: ${score.ties}`);
+   Wns: ${score.wins}, Loses: ${score.losses}, Ties: ${score.ties}`);
    }
 
    function pickcomputerMove() {
@@ -152,6 +153,31 @@ Wins: ${score.wins}, Loses: ${score.losses}, Ties: ${score.ties}`);
       return computerMove;
    }
 
+
+      // another use of an object in javascript
+
+      console.log('xyp collen escader'.length);
+      console.log('xyp collen escader'.toUpperCase);
+
+      const object1 = {
+         name: 'Xyp Collen Escader'
+      };
+
+      const object2 = object1;
+
+      object1.name ='Regine Bulilan';
+
+      console.log(object1);
+      console.log(object2);
+
+    const object3 = {
+      name: 'Xyp Collen Escader'
+    };
+
+    console.log(object3 === object1);
+    console.log(object2 === object1);
+
+    
 </script>
 
 </html>
